@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package gorpc;
+
+option go_package = "./gorpc";
+
+service Message {
+	rpc SayHello (Request) returns (Response) {};
+}
+
+
+message Request {
+	string name = 1;
+}
+
+message Response {
+	string name = 1;
+}
+
